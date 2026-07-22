@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Google Sheets POS System | Charles</title>
+
+    <meta
+        name="description"
+        content="A web-based Point of Sale system built with Google Sheets and Google Apps Script."
+    >
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <a
+            href="../index.html"
+            class="logo"
+        >
+            Charles<span>.</span>
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="../index.html#about">
+                About
+            </a>
+
+            <a href="../index.html#skills">
+                Skills
+            </a>
+
+            <a href="../index.html#projects">
+                Projects
+            </a>
+
+            <a href="../index.html#certification">
+                Certification
+            </a>
+
+            <a href="../index.html#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     PROJECT HERO
+========================= -->
+
+<section class="project-hero">
+
+    <div class="container">
+
+        <a
+            href="../index.html#projects"
+            class="back-link"
+        >
+            ← Back to Projects
+        </a>
+
+
+        <p class="section-label">
+            FEATURED PROJECT • BUSINESS AUTOMATION
+        </p>
+
+
+        <h1>
+            Web-Based Point of Sale System
+        </h1>
+
+
+        <p class="project-hero-description">
+
+            A custom web-based Point of Sale system designed for
+            a small business, using Google Sheets as the backend
+            database and Google Apps Script to automate order
+            processing and business workflows.
+
+        </p>
+
+
+        <div class="project-hero-tags">
+
+            <span>
+                Google Sheets
+            </span>
+
+            <span>
+                Google Apps Script
+            </span>
+
+            <span>
+                HTML
+            </span>
+
+            <span>
+                CSS
+            </span>
+
+            <span>
+                JavaScript
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECT OVERVIEW
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="case-study-grid">
+
+
+            <div>
+
+                <p class="section-label">
+                    PROJECT OVERVIEW
+                </p>
+
+                <h2>
+                    Turning a spreadsheet into a practical
+                    business application.
+                </h2>
+
+                <p class="case-study-text">
+
+                    This project started with the goal of creating
+                    a simple and practical Point of Sale solution
+                    for a small business without relying on expensive
+                    third-party POS software.
+
+                </p>
+
+                <p class="case-study-text">
+
+                    The system combines the flexibility of Google Sheets
+                    with Google Apps Script and a custom web interface.
+                    This allows staff to process orders through a
+                    user-friendly interface while transaction data is
+                    automatically recorded in Google Sheets.
+
+                </p>
+
+                <p class="case-study-text">
+
+                    The result is a lightweight business application
+                    that can be accessed through a web browser on
+                    computers, tablets, and mobile devices.
+
+                </p>
+
+            </div>
+
+
+            <div class="case-study-highlight">
+
+                <div class="highlight-item">
+
+                    <strong>
+                        Platform
+                    </strong>
+
+                    <span>
+                        Google Workspace
+                    </span>
+
+                </div>
+
+
+                <div class="highlight-item">
+
+                    <strong>
+                        Frontend
+                    </strong>
+
+                    <span>
+                        HTML • CSS • JavaScript
+                    </span>
+
+                </div>
+
+
+                <div class="highlight-item">
+
+                    <strong>
+                        Backend
+                    </strong>
+
+                    <span>
+                        Google Sheets
+                    </span>
+
+                </div>
+
+
+                <div class="highlight-item">
+
+                    <strong>
+                        Automation
+                    </strong>
+
+                    <span>
+                        Google Apps Script
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     THE PROBLEM
+========================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="case-study-narrow">
+
+            <p class="section-label">
+                THE CHALLENGE
+            </p>
+
+            <h2>
+                A simple business needed a simple,
+                flexible solution.
+            </h2>
+
+            <p class="case-study-text">
+
+                Traditional POS systems can introduce subscription
+                costs, complicated setups, and unnecessary features
+                for small businesses.
+
+            </p>
+
+            <p class="case-study-text">
+
+                The goal was to create a solution that could simplify
+                order taking and transaction recording while keeping
+                the underlying data accessible and easy to manage.
+
+            </p>
+
+            <p class="case-study-text">
+
+                The system needed to provide a better experience
+                for staff while maintaining a centralized source
+                of transaction data.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     THE SOLUTION
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <p class="section-label">
+                THE SOLUTION
+            </p>
+
+            <h2>
+                A custom POS interface connected to
+                a Google Sheets data layer.
+            </h2>
+
+            <p>
+
+                I designed and developed a web-based POS interface
+                that connects directly with Google Sheets through
+                Google Apps Script.
+
+            </p>
+
+        </div>
+
+
+        <div class="solution-grid">
+
+
+            <div class="solution-card">
+
+                <div class="solution-number">
+                    01
+                </div>
+
+                <h3>
+                    Product Management
+                </h3>
+
+                <p>
+
+                    Products and services are maintained through
+                    Google Sheets, allowing the business to update
+                    its catalog without modifying the application code.
+
+                </p>
+
+            </div>
+
+
+            <div class="solution-card">
+
+                <div class="solution-number">
+                    02
+                </div>
+
+                <h3>
+                    Point of Sale Interface
+                </h3>
+
+                <p>
+
+                    Staff can select products or services through
+                    a dedicated web interface and add them to
+                    the current order.
+
+                </p>
+
+            </div>
+
+
+            <div class="solution-card">
+
+                <div class="solution-number">
+                    03
+                </div>
+
+                <h3>
+                    Automated Order Processing
+                </h3>
+
+                <p>
+
+                    When an order is submitted, the system processes
+                    the transaction and records the relevant order
+                    information automatically.
+
+                </p>
+
+            </div>
+
+
+            <div class="solution-card">
+
+                <div class="solution-number">
+                    04
+                </div>
+
+                <h3>
+                    Centralized Data
+                </h3>
+
+                <p>
+
+                    Transaction data is stored in Google Sheets,
+                    providing a centralized source that can be
+                    used for reporting and future analysis.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SYSTEM ARCHITECTURE
+========================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <p class="section-label">
+                SYSTEM ARCHITECTURE
+            </p>
+
+            <h2>
+                How the system works.
+            </h2>
+
+        </div>
+
+
+        <div class="architecture">
+
+            <div class="architecture-box">
+
+                <span>
+                    01
+                </span>
+
+                <strong>
+                    Staff
+                </strong>
+
+                <p>
+                    Selects products or services
+                    using the POS interface.
+                </p>
+
+            </div>
+
+
+            <div class="architecture-arrow">
+                →
+            </div>
+
+
+            <div class="architecture-box">
+
+                <span>
+                    02
+                </span>
+
+                <strong>
+                    Web App
+                </strong>
+
+                <p>
+                    HTML, CSS and JavaScript
+                    manage the POS interface.
+                </p>
+
+            </div>
+
+
+            <div class="architecture-arrow">
+                →
+            </div>
+
+
+            <div class="architecture-box">
+
+                <span>
+                    03
+                </span>
+
+                <strong>
+                    Apps Script
+                </strong>
+
+                <p>
+                    Processes requests and
+                    handles business logic.
+                </p>
+
+            </div>
+
+
+            <div class="architecture-arrow">
+                →
+            </div>
+
+
+            <div class="architecture-box">
+
+                <span>
+                    04
+                </span>
+
+                <strong>
+                    Google Sheets
+                </strong>
+
+                <p>
+                    Stores products, orders,
+                    and transaction records.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     KEY FEATURES
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <p class="section-label">
+                KEY FEATURES
+            </p>
+
+            <h2>
+                Built around the needs of the business.
+            </h2>
+
+        </div>
+
+
+        <div class="features-list">
+
+
+            <div class="feature-item">
+
+                <span>
+                    ✓
+                </span>
+
+                <div>
+
+                    <h3>
+                        Product and Service Selection
+                    </h3>
+
+                    <p>
+
+                        Staff can quickly select available products
+                        and services directly from the POS interface.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <span>
+                    ✓
+                </span>
+
+                <div>
+
+                    <h3>
+                        Dynamic Order Cart
+                    </h3>
+
+                    <p>
+
+                        Selected items are added to an order cart
+                        where the current transaction can be reviewed
+                        before submission.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <span>
+                    ✓
+                </span>
+
+                <div>
+
+                    <h3>
+                        Automatic Total Calculation
+                    </h3>
+
+                    <p>
+
+                        The system automatically calculates the total
+                        amount based on the items included in the order.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <span>
+                    ✓
+                </span>
+
+                <div>
+
+                    <h3>
+                        Automated Order Recording
+                    </h3>
+
+                    <p>
+
+                        Submitted transactions are recorded into
+                        Google Sheets for centralized data management.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <span>
+                    ✓
+                </span>
+
+                <div>
+
+                    <h3>
+                        Browser-Based Access
+                    </h3>
+
+                    <p>
+
+                        The POS can be accessed through a web browser,
+                        allowing the business to use existing devices
+                        without requiring dedicated POS hardware.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <span>
+                    ✓
+                </span>
+
+                <div>
+
+                    <h3>
+                        Centralized Reporting Data
+                    </h3>
+
+                    <p>
+
+                        Transaction records can be analyzed later using
+                        Google Sheets, Excel, Power BI, or other
+                        reporting tools.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     BUSINESS VALUE
+========================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="case-study-narrow">
+
+            <p class="section-label">
+                BUSINESS VALUE
+            </p>
+
+            <h2>
+                More than a POS system.
+            </h2>
+
+            <p class="case-study-text">
+
+                This project demonstrates how existing tools can be
+                combined to create a practical business solution
+                without requiring a complex technology stack.
+
+            </p>
+
+            <p class="case-study-text">
+
+                By connecting a custom web interface to Google Sheets,
+                the business gains a centralized data source while
+                maintaining flexibility in managing products,
+                services, and transactions.
+
+            </p>
+
+            <p class="case-study-text">
+
+                The project also creates a foundation for future
+                analytics, allowing transaction data to be transformed
+                into reports and dashboards that can support
+                data-driven business decisions.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECT OUTCOME
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <p class="section-label">
+                PROJECT OUTCOME
+            </p>
+
+            <h2>
+                From manual transactions to a
+                connected digital workflow.
+            </h2>
+
+        </div>
+
+
+        <div class="outcome-grid">
+
+
+            <div class="outcome-card">
+
+                <strong>
+                    Centralized
+                </strong>
+
+                <p>
+                    Transaction data is stored in one
+                    centralized Google Sheets environment.
+                </p>
+
+            </div>
+
+
+            <div class="outcome-card">
+
+                <strong>
+                    Accessible
+                </strong>
+
+                <p>
+                    Staff can access the POS through
+                    a web browser on supported devices.
+                </p>
+
+            </div>
+
+
+            <div class="outcome-card">
+
+                <strong>
+                    Automated
+                </strong>
+
+                <p>
+                    Google Apps Script handles backend
+                    processes and transaction workflows.
+                </p>
+
+            </div>
+
+
+            <div class="outcome-card">
+
+                <strong>
+                    Scalable
+                </strong>
+
+                <p>
+                    The data structure can support future
+                    reporting and analytics solutions.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TECHNOLOGIES
+========================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <p class="section-label">
+                TECHNOLOGY STACK
+            </p>
+
+            <h2>
+                Tools and technologies used.
+            </h2>
+
+        </div>
+
+
+        <div class="technology-stack">
+
+            <span>
+                Google Sheets
+            </span>
+
+            <span>
+                Google Apps Script
+            </span>
+
+            <span>
+                HTML5
+            </span>
+
+            <span>
+                CSS3
+            </span>
+
+            <span>
+                JavaScript
+            </span>
+
+            <span>
+                Google Workspace
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="section contact-section">
+
+    <div class="container">
+
+        <div class="contact-content">
+
+            <p class="section-label">
+                MORE PROJECTS
+            </p>
+
+            <h2>
+                Interested in seeing more of my work?
+            </h2>
+
+            <p>
+
+                Explore more of my data analytics,
+                automation, and business intelligence projects.
+
+            </p>
+
+            <a
+                href="../index.html#projects"
+                class="btn btn-primary"
+            >
+                Back to Portfolio
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 Charles. Built with HTML & CSS and hosted on GitHub Pages.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
