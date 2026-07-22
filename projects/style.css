@@ -6,7 +6,7 @@
 /* Project Hero */
 
 .project-hero {
-    padding: 170px 30px 100px;
+    padding: 200px 30px 100px;
 
     background:
         radial-gradient(
@@ -23,7 +23,7 @@
 
     font-size: clamp(45px, 7vw, 75px);
 
-    line-height: 1.05;
+    line-height: 1.1;
 
     letter-spacing: -3px;
 
@@ -421,9 +421,9 @@
 
 @media (max-width: 650px) {
 
-    .project-hero {
-        padding: 140px 20px 80px;
-    }
+.project-hero {
+    padding: 160px 20px 80px;
+}
 
     .project-hero h1 {
         font-size: 48px;
