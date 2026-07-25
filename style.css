@@ -1,22 +1,4 @@
-/* =========================
-   LOGO
-========================= */
 
-.logo {
-    display: flex;
-    align-items: center;
-    height: 70px;
-}
-
-.logo-image {
-    width: 70px;
-    height: 50px;
-    object-fit: contain;
-    display: block;
-
-    filter: invert(1);
-    opacity: 0.8;
-}
 
 
 /* =========================
