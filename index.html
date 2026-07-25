@@ -707,94 +707,88 @@
              CONTACT FORM
         ========================= -->
 
-        <form
-            action="https://formspree.io/f/xqergwjq"
-            method="POST"
-            class="contact-form"
+       <form
+    id="contact-form"
+    action="https://formspree.io/f/xqergwjq"
+    method="POST"
+    class="contact-form"
+>
+
+    <input
+        type="hidden"
+        name="_subject"
+        value="New Portfolio Inquiry from Charles"
+    >
+
+
+    <div class="form-group">
+
+        <label for="name">
+            Name
+        </label>
+
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            autocomplete="name"
+            required
         >
 
-
-            <!-- EMAIL SUBJECT -->
-
-            <input
-                type="hidden"
-                name="_subject"
-                value="New Portfolio Inquiry from Charles"
-            >
+    </div>
 
 
-            <!-- NAME -->
+    <div class="form-group">
 
-            <div class="form-group">
+        <label for="email">
+            Email Address
+        </label>
 
-                <label for="name">
-                    Name
-                </label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your@email.com"
+            autocomplete="email"
+            required
+        >
 
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Your name"
-                    autocomplete="name"
-                    required
-                >
-
-            </div>
+    </div>
 
 
-            <!-- EMAIL -->
+    <div class="form-group">
 
-            <div class="form-group">
+        <label for="message">
+            Message
+        </label>
 
-                <label for="email">
-                    Email Address
-                </label>
+        <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Tell me about your project or inquiry..."
+            required
+        ></textarea>
 
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="your@email.com"
-                    autocomplete="email"
-                    required
-                >
-
-            </div>
+    </div>
 
 
-            <!-- MESSAGE -->
-
-            <div class="form-group">
-
-                <label for="message">
-                    Message
-                </label>
-
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="6"
-                    placeholder="Tell me about your project or inquiry..."
-                    required
-                ></textarea>
-
-            </div>
+    <button
+        type="submit"
+        class="form-submit"
+        id="submit-button"
+    >
+        Send Inquiry →
+    </button>
 
 
-            <!-- SUBMIT -->
+    <p
+        id="form-status"
+        class="form-status"
+    ></p>
 
-            <button
-                type="submit"
-                class="form-submit"
-            >
-
-                Send Inquiry →
-
-            </button>
-
-
-        </form>
+</form>
 
 
         <!-- =========================
@@ -876,6 +870,96 @@
 
 </footer>
 
+    <script>
+
+const contactForm = document.getElementById("contact-form");
+
+const submitButton = document.getElementById("submit-button");
+
+const formStatus = document.getElementById("form-status");
+
+
+contactForm.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+
+    // Change button text while sending
+
+    submitButton.disabled = true;
+
+    submitButton.textContent = "Sending...";
+
+
+    const formData = new FormData(contactForm);
+
+
+    try {
+
+        const response = await fetch(
+            contactForm.action,
+            {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            }
+        );
+
+
+        if (response.ok) {
+
+            // Clear all form fields
+
+            contactForm.reset();
+
+
+            // Show success message
+
+            formStatus.textContent =
+                "Thank you! Your message has been sent successfully.";
+
+            formStatus.className =
+                "form-status success";
+
+
+            // Reset button
+
+            submitButton.disabled = false;
+
+            submitButton.textContent =
+                "Send Inquiry →";
+
+
+        } else {
+
+            throw new Error(
+                "There was a problem submitting the form."
+            );
+
+        }
+
+
+    } catch (error) {
+
+        formStatus.textContent =
+            "Something went wrong. Please try again or email me directly.";
+
+        formStatus.className =
+            "form-status error";
+
+
+        submitButton.disabled = false;
+
+        submitButton.textContent =
+            "Send Inquiry →";
+
+    }
+
+});
+
+</script>
 
 </body>
 
