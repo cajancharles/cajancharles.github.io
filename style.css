@@ -1712,3 +1712,34 @@ footer {
     color: #ffffff;
     border-color: #ffffff;
 }
+
+/* =========================
+   FORM STATUS
+========================= */
+
+.form-status {
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    min-height: 22px;
+}
+
+
+.form-status.success {
+    color: #8fbf9f;
+}
+
+
+.form-status.error {
+    color: #d98c8c;
+}
+
+
+.form-submit:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
