@@ -1,4 +1,20 @@
 /* =========================
+   LOGO IMAGE
+========================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================
    RESET
 ========================= */
 
