@@ -1611,3 +1611,104 @@ footer {
     }
 
 }
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form {
+    max-width: 650px;
+    margin: 50px auto 0;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #aaaaaa;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 16px;
+    background: #111111;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #555555;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #666666;
+    background: #141414;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-submit {
+    padding: 14px 22px;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    color: #000000;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.form-submit:hover {
+    background: #cccccc;
+    border-color: #cccccc;
+}
+
+.contact-email {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.contact-email p {
+    margin-bottom: 10px;
+    color: #666666;
+    font-size: 13px;
+}
+
+.contact-email a {
+    color: #aaaaaa;
+    font-size: 15px;
+    border-bottom: 1px solid #444444;
+    padding-bottom: 4px;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.contact-email a:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
