@@ -1743,3 +1743,24 @@ footer {
 
     cursor: not-allowed;
 }
+
+/* =========================
+   PROJECT LINKS
+========================= */
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 25px;
+}
+
+
+.project-demo {
+    color: #ffffff;
+}
+
+
+.project-demo:hover {
+    color: #aaaaaa;
+}
