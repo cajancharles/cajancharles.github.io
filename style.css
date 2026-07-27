@@ -1764,3 +1764,39 @@ footer {
 .project-demo:hover {
     color: #aaaaaa;
 }
+
+/* =========================
+   PROJECT HERO ACTIONS
+========================= */
+
+.project-hero-actions {
+    margin-top: 30px;
+}
+
+
+.project-hero-actions .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.project-demo {
+    color: #ffffff;
+}
+
+
+.project-demo:hover {
+    color: #aaaaaa;
+}
+
+
+.demo-notice {
+    margin-top: 15px;
+
+    color: #666666;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
