@@ -16,7 +16,7 @@
 
     <meta
         name="description"
-        content="A web-based Point of Sale system built with Google Sheets and Google Apps Script."
+        content="A web-based Point of Sale system for a carwash and auto detailing business, built with Google Sheets and Google Apps Script — with vehicle size-based pricing, discounts, and receipt printing."
     >
 
     <link
@@ -101,10 +101,11 @@
 
         <p class="project-hero-description">
 
-            A custom web-based Point of Sale system designed
-            for a small business, using Google Sheets as the
-            backend data source and Google Apps Script to
-            automate order processing and transaction recording.
+            A custom web-based Point of Sale system built for a
+            carwash and auto detailing business, using Google
+            Sheets as the backend data source and Google Apps
+            Script to automate size-based pricing, discounts,
+            transaction recording, and receipt printing.
 
         </p>
 
@@ -387,8 +388,9 @@
 
                     This project started with the goal of creating
                     a simple and practical Point of Sale solution
-                    for a small business without relying on
-                    expensive third-party POS software.
+                    for a carwash and auto detailing business
+                    without relying on expensive third-party
+                    POS software.
 
                 </p>
 
@@ -397,16 +399,20 @@
 
                     The system combines the flexibility of
                     Google Sheets with Google Apps Script and
-                    a custom web interface.
+                    a custom web interface, including a pricing
+                    model built around vehicle size rather than
+                    a flat rate per service.
 
                 </p>
 
 
                 <p>
 
-                    Staff can process orders through a dedicated
-                    POS interface while transaction data is
-                    automatically recorded in Google Sheets.
+                    Staff can process orders, apply discounts,
+                    and take payment through a dedicated POS
+                    interface, while a separate receipt page
+                    lets any transaction be looked up and
+                    reprinted by its transaction ID.
 
                 </p>
 
@@ -416,7 +422,9 @@
                     The result is a lightweight business
                     application that can be accessed through
                     a web browser on computers, tablets,
-                    and mobile devices.
+                    and mobile devices — with no server or
+                    database to maintain outside of Google's
+                    own tools.
 
                 </p>
 
@@ -463,6 +471,12 @@
                     Traditional POS systems can introduce
                     subscription costs, complicated setups,
                     and unnecessary features for small businesses.
+                    A carwash also has needs most generic POS
+                    software doesn't handle well out of the box —
+                    pricing that changes by vehicle size, mixed
+                    carts of individual services and bundled
+                    packages, and receipts that may need to be
+                    reprinted after the customer has already left.
 
                 </p>
 
@@ -472,7 +486,8 @@
                     The goal was to create a solution that could
                     simplify order taking and transaction recording
                     while keeping the underlying data accessible
-                    and easy to manage.
+                    and easy to manage — and editable by a
+                    non-technical owner directly from a spreadsheet.
 
                 </p>
 
@@ -480,8 +495,11 @@
                 <p>
 
                     The system needed to provide a better experience
-                    for staff while maintaining a centralized source
-                    of transaction data.
+                    for staff while maintaining a centralized,
+                    accurate source of transaction data that could
+                    survive malformed input, missing optional
+                    sheets, and future schema changes without
+                    breaking existing records.
 
                 </p>
 
@@ -527,26 +545,34 @@
 
                     I designed and developed a web-based POS
                     interface that connects directly with
-                    Google Sheets through Google Apps Script.
+                    Google Sheets through Google Apps Script,
+                    with the spreadsheet acting as both the
+                    product catalog and the transaction database.
 
                 </p>
 
 
                 <p>
 
-                    The frontend provides a simple interface
-                    for staff to select products and services,
-                    manage an order cart, calculate totals,
-                    and submit transactions.
+                    The frontend lets staff select a vehicle
+                    size, choose individual services or bundled
+                    packages (with prices that update instantly
+                    based on that size), add optional add-ons,
+                    apply a percentage discount, and calculate
+                    change against the amount received.
 
                 </p>
 
 
                 <p>
 
-                    Google Apps Script handles the backend logic
-                    and communicates with Google Sheets to
-                    process and store transaction data.
+                    Google Apps Script handles the backend logic —
+                    generating sequential transaction IDs,
+                    validating spreadsheet structure, saving
+                    transactions and line items, and powering a
+                    separate Receipt Printing page where any
+                    past transaction can be searched by ID and
+                    printed again.
 
                 </p>
 
@@ -712,7 +738,7 @@
 
 
             <h2>
-                Built around the needs of the business.
+                Built around the needs of a real carwash.
             </h2>
 
         </div>
@@ -731,14 +757,16 @@
                 <div>
 
                     <h3>
-                        Product and Service Selection
+                        Vehicle Size-Based Dynamic Pricing
                     </h3>
 
                     <p>
 
-                        Staff can quickly select available
-                        products, services, and packages
-                        directly from the POS interface.
+                        Every service and package is priced
+                        across six vehicle-size tiers, from
+                        Small to XX-Large. Selecting a size
+                        instantly re-prices the entire catalog —
+                        no manual lookup required.
 
                     </p>
 
@@ -757,14 +785,17 @@
                 <div>
 
                     <h3>
-                        Dynamic Order Cart
+                        Services, Packages & Optional Add-Ons
                     </h3>
 
                     <p>
 
-                        Selected items are added to an order
-                        cart where the current transaction
-                        can be reviewed before submission.
+                        Individual services, bundled packages,
+                        and add-ons are pulled live from separate
+                        spreadsheet tabs. The Add-Ons tab is
+                        entirely optional — the system detects
+                        whether it exists and degrades gracefully
+                        if it doesn't.
 
                     </p>
 
@@ -783,14 +814,16 @@
                 <div>
 
                     <h3>
-                        Automatic Total Calculation
+                        Discounts, Totals & Change Calculation
                     </h3>
 
                     <p>
 
-                        The system automatically calculates
-                        the total amount based on the items
-                        included in the order.
+                        Staff can apply a percentage-based
+                        discount with live subtotal and total
+                        recalculation, then track amount
+                        received and change in real time as
+                        payment is entered.
 
                     </p>
 
@@ -809,14 +842,16 @@
                 <div>
 
                     <h3>
-                        Automated Order Recording
+                        Auto-Incrementing Transaction IDs
                     </h3>
 
                     <p>
 
-                        Submitted transactions are recorded
-                        into Google Sheets for centralized
-                        data management.
+                        Every sale gets a sequential, human-
+                        readable ID (e.g. DEMO-000042) generated
+                        and tracked through a Settings sheet,
+                        with a configurable prefix for easy
+                        rebranding.
 
                     </p>
 
@@ -835,13 +870,16 @@
                 <div>
 
                     <h3>
-                        Browser-Based Access
+                        Dedicated Receipt Printing Page
                     </h3>
 
                     <p>
 
-                        The POS can be accessed through
-                        a web browser on supported devices.
+                        A separate, print-optimized page lets
+                        staff search any past transaction by ID
+                        and reprint a formatted receipt — with
+                        UI controls automatically hidden when
+                        the print dialog opens.
 
                     </p>
 
@@ -867,7 +905,66 @@
 
                         Transaction records can be analyzed
                         using Google Sheets, Excel, Power BI,
-                        or other reporting tools.
+                        or other reporting tools, including a
+                        built-in daily sales and transaction
+                        count summary.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="feature-item">
+
+                <span>
+                    07
+                </span>
+
+                <div>
+
+                    <h3>
+                        Data Validation & Error Handling
+                    </h3>
+
+                    <p>
+
+                        Every sheet read is checked against
+                        required columns before processing, and
+                        every numeric or text field is sanitized,
+                        so malformed spreadsheet data or a missing
+                        column produces a clear message instead
+                        of a broken transaction.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="feature-item">
+
+                <span>
+                    08
+                </span>
+
+                <div>
+
+                    <h3>
+                        Spreadsheet-Driven Configuration
+                    </h3>
+
+                    <p>
+
+                        Prices, active/inactive products, display
+                        order, and even the transaction ID prefix
+                        are all controlled from the spreadsheet —
+                        a non-technical owner can update the
+                        business without touching code.
 
                     </p>
 
@@ -916,7 +1013,8 @@
                     This project demonstrates how existing
                     tools can be combined to create a practical
                     business solution without requiring a
-                    complex technology stack.
+                    complex technology stack — or a monthly
+                    software subscription.
 
                 </p>
 
@@ -927,7 +1025,8 @@
                     Google Sheets, the business gains a
                     centralized data source while maintaining
                     flexibility in managing products, services,
-                    and transactions.
+                    pricing tiers, and transactions directly
+                    from a spreadsheet.
 
                 </p>
 
@@ -937,7 +1036,9 @@
                     The project also creates a foundation for
                     future analytics, allowing transaction data
                     to be transformed into reports and dashboards
-                    that can support data-driven business decisions.
+                    that can support data-driven business decisions,
+                    while the receipt lookup system keeps
+                    day-to-day customer service running smoothly.
 
                 </p>
 
