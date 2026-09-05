@@ -74,6 +74,8 @@ All content lives in `index.html`:
 
 - **Copy & pricing** — edit the text directly inside each `<section>`. The pricing block is under `id="pricing"`.
 - **Contact details** — update the `mailto:` links (currently `charlesenrickcajan@gmail.com`) and the Messenger link (`https://m.me/charlesgpt`) in the `#pricing` and `#demo` sections.
+- **Live demo link** — the "Try the live demo" buttons point to the deployed Apps Script tool. Update this URL in three places if it ever changes: the nav bar, the hero, and the final CTA section.
+- **Sample data spreadsheet** — the "Browse the underlying sample data" link and the disclaimer both point to a view-only Google Sheet showing the randomized demo records. Update or remove these links if the sheet moves.
 - **Colors & type** — all design tokens are declared once at the top of the `<style>` block under `:root` (e.g. `--accent`, `--bg`, `--text`).
 - **Screenshots** — replace files inside `assets/` (keep the same filenames, or update the `src` attributes in `index.html` if you rename them).
 - **Social preview image** — update the `og:image` meta tag if you change `assets/dashboard.png`, and set an absolute URL once the site has a real domain.
