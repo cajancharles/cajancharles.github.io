@@ -1,988 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carwash POS System — Point of Sale Software for Car Wash Businesses</title>
+<meta name="description" content="Carwash POS System is a complete point of sale built for car wash businesses in the Philippines. Run checkout, track inventory, manage payroll and see sales reports — all in one system.">
+<meta name="theme-color" content="#071018">
 
-    <meta charset="UTF-8">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Carwash POS System — Point of Sale for Car Wash Businesses">
+<meta property="og:description" content="Checkout, inventory, payroll and sales reports built specifically for carwash operators. One-time license, lifetime access.">
+<meta property="og:image" content="assets/dashboard.png">
+<meta name="twitter:card" content="summary_large_image">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23071018'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle'%3E%F0%9F%9A%97%3C/text%3E%3C/svg%3E">
 
-    <title>
-        Charles | Virtual Assistant & Business Support
-    </title>
-
-    <meta
-        name="description"
-        content="Charles is a Virtual Assistant and Business Support Specialist offering data entry, Excel and Google Sheets reporting, dashboards, KPI reporting, POS systems, website setup, WordPress support, and administrative services."
-    >
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#071018;
+  --bg2:#0b1720;
+  --card:#0f1d27;
+  --card2:#122431;
+  --text:#f5f8fb;
+  --muted:#9eb0bd;
+  --line:rgba(255,255,255,.09);
+  --accent:#55d6ff;
+  --accent2:#7b8cff;
+  --green:#62e6a8;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:
+  radial-gradient(circle at 80% 10%,rgba(85,214,255,.12),transparent 30%),
+  radial-gradient(circle at 15% 25%,rgba(123,140,255,.12),transparent 28%),
+  var(--bg);
+  color:var(--text);font-family:"DM Sans",system-ui,sans-serif;line-height:1.5;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{
+  position:sticky;top:0;z-index:30;
+  backdrop-filter:blur(18px);
+  background:rgba(7,16,24,.78);
+  border-bottom:1px solid var(--line);
+}
+.navin{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.04em;font-size:19px;display:flex;align-items:center;gap:9px}
+.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:28px;color:#b8c7d1;font-size:14px}
+.navlinks a:hover{color:white}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px 20px;border-radius:10px;font-weight:700;font-size:14px;
+  border:1px solid var(--line);transition:.2s;cursor:pointer
+}
+.btn.primary{background:var(--accent);color:#031018;border-color:var(--accent);box-shadow:0 8px 30px rgba(85,214,255,.18)}
+.btn.primary:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.btn.ghost{background:rgba(255,255,255,.035)}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.navRight{display:flex;align-items:center;gap:10px}
+.hero{padding:88px 0 76px;position:relative;overflow:hidden}
+.heroGrid{display:grid;grid-template-columns:1.02fr .98fr;gap:60px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(85,214,255,.2);
+  background:rgba(85,214,255,.07);color:#9fe8ff;padding:7px 12px;border-radius:99px;
+  font-size:13px;font-weight:600
+}
+h1{font-size:clamp(40px,5.6vw,68px);line-height:1.02;letter-spacing:-.045em;margin:22px 0}
+h1 .grad{background:linear-gradient(90deg,#fff 15%,#72ddff 70%,#8493ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;color:var(--muted);max-width:600px;margin:0 0 30px}
+.heroBtns{display:flex;gap:12px;flex-wrap:wrap}
+.priceNote{color:#7c8f9b;font-size:13px;margin-top:10px}
+.micro{display:grid;grid-template-columns:repeat(2,auto);gap:12px 26px;margin-top:30px;color:#c3d2db;font-size:14px}
+.micro span{display:flex;align-items:center}
+.micro span::before{content:"✓";color:var(--green);font-weight:800;margin-right:9px}
+.appFrame{
+  position:relative;border:1px solid rgba(255,255,255,.13);border-radius:18px;
+  padding:9px;background:rgba(255,255,255,.045);box-shadow:0 35px 90px rgba(0,0,0,.45);
+}
+.appFrame img{width:100%;display:block;border-radius:11px}
+.glow{position:absolute;inset:auto 10% -12% 10%;height:120px;background:var(--accent);filter:blur(80px);opacity:.18;z-index:-1}
+section{padding:88px 0}
+.sectionHead{text-align:center;max-width:700px;margin:0 auto 46px}
+.kicker{color:var(--accent);font-size:13px;font-weight:700}
+h2{font-size:clamp(30px,3.6vw,44px);line-height:1.1;letter-spacing:-.03em;margin:10px 0}
+.sectionHead p{color:var(--muted);font-size:16px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(255,255,255,.025)}
+.stat{padding:25px;border-right:1px solid var(--line);text-align:center}
+.stat:last-child{border:0}
+.stat strong{display:block;font-size:20px}.stat span{font-size:13px;color:var(--muted)}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.feature{background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:16px;padding:24px}
+.icon{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:rgba(85,214,255,.1);color:var(--accent);font-size:19px;margin-bottom:16px}
+.feature h3{margin:0 0 7px;font-size:16px}.feature p{margin:0;color:var(--muted);font-size:13.5px}
+.showcase{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}
+.showcase.reverse .copy{order:2}.showcase.reverse .shotWrap{order:1}
+.copy p{color:var(--muted);font-size:16px}.checklist{padding:0;margin:22px 0;list-style:none}
+.checklist li{margin:11px 0;color:#d8e3e9;font-size:15px}.checklist li:before{content:"✓";color:var(--green);margin-right:10px;font-weight:800}
+.shot{border:1px solid var(--line);background:#0b1117;padding:10px;border-radius:16px;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.shot img{display:block;width:100%;border-radius:9px}
+.shotLabel{font-size:12px;color:var(--muted);margin:10px 2px 0}
+.altShots{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.workflow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{position:relative;padding:24px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}
+.num{font-size:13px;color:var(--accent);font-weight:700}.step h3{font-size:16px;margin:10px 0 5px}.step p{font-size:13.5px;color:var(--muted);margin:0}
+.darkBand{background:linear-gradient(180deg,transparent,rgba(85,214,255,.035),transparent)}
+.testimonial{border:1px solid var(--line);border-radius:20px;padding:40px;background:rgba(255,255,255,.025);max-width:760px;margin:0 auto;text-align:center}
+.testimonial p{font-size:20px;line-height:1.5;color:#e7eff3;margin:0 0 18px}
+.testimonial .who{color:var(--muted);font-size:14px}
+.cta{
+  border:1px solid rgba(85,214,255,.2);border-radius:24px;padding:60px;
+  background:radial-gradient(circle at 85% 20%,rgba(85,214,255,.12),transparent 35%),rgba(255,255,255,.025);
+  text-align:center
+}
+.cta p{color:var(--muted);max-width:600px;margin:0 auto 25px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:#81919b;font-size:13px}
+.footerin{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.mobileMenu{display:none}
+@media(max-width:900px){
+  .navlinks{display:none}.mobileMenu{display:inline-flex}
+  .heroGrid,.showcase{grid-template-columns:1fr}
+  .showcase.reverse .copy,.showcase.reverse .shotWrap{order:0}
+  .hero{padding-top:60px}
+  .features{grid-template-columns:1fr 1fr}.workflow{grid-template-columns:1fr 1fr}
+  .altShots{grid-template-columns:1fr 1fr}
+  .micro{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .container{width:min(var(--max),calc(100% - 28px))}
+  .navin{height:66px}.navin .btn.primary{display:none}
+  h1{font-size:42px}.hero p{font-size:16px}
+  section{padding:60px 0}.features,.workflow,.stats{grid-template-columns:1fr}
+  .stat{border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}
+  .altShots{grid-template-columns:1fr}.cta{padding:34px 20px}
+  .testimonial{padding:28px}
+  .footerin{flex-direction:column}
+}
+</style>
 </head>
-
-
 <body>
 
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
-<nav class="navbar">
-
-    <div class="nav-container">
-
-        <a
-            href="#home"
-            class="logo"
-        >
-            Charles.
-        </a>
-
-
-        <div class="nav-links">
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#services">
-                Services
-            </a>
-
-            <a href="#projects">
-                Projects
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-        </div>
-
+<nav>
+  <div class="container navin">
+    <a class="logo" href="#">🚗 Carwash <span>POS System</span></a>
+    <div class="navlinks">
+      <a href="#features">Features</a>
+      <a href="#showcase">Product tour</a>
+      <a href="#workflow">How it works</a>
+      <a href="#pricing">Pricing</a>
     </div>
-
+    <div class="navRight">
+      <a class="btn primary" href="#demo">Request a demo</a>
+      <button class="btn ghost mobileMenu" aria-label="Menu">Menu</button>
+    </div>
+  </div>
 </nav>
 
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section
-    id="home"
-    class="hero"
->
-
-    <div class="container">
-
-        <p class="hero-label">
-            VIRTUAL ASSISTANT · BUSINESS SUPPORT
-        </p>
-
-
-        <h1>
-            Hi, I'm Charles.
-        </h1>
-
-
-        <p class="hero-description">
-
-            I help businesses stay organized, save time,
-            and work more efficiently through reliable
-            virtual assistance, data management, reporting,
-            automation, and digital support.
-
-        </p>
-
-
-        <div class="hero-links">
-
-            <a
-                href="#services"
-                class="text-link"
-            >
-                Explore my services
-                <span>→</span>
-            </a>
-
-
-            <a
-                href="#contact"
-                class="text-link"
-            >
-                Let's work together
-                <span>→</span>
-            </a>
-
-        </div>
-
+<main>
+<section class="hero">
+  <div class="container heroGrid">
+    <div>
+      <div class="eyebrow">Purpose-built for car wash operators</div>
+      <h1>Stop running your carwash<br><span class="grad">on notebooks and guesswork.</span></h1>
+      <p>Carwash POS System replaces scattered logbooks and spreadsheets with one point of sale built around how a carwash actually operates — vehicle details, services, packages, staff payroll, inventory and sales reports, all in one place.</p>
+      <div class="heroBtns">
+        <a class="btn primary" href="#demo">Request a demo →</a>
+        <a class="btn ghost" href="#showcase">See it in action</a>
+      </div>
+      <div class="priceNote">₱10,000 one-time license · lifetime access · no monthly fees</div>
+      <div class="micro">
+        <span>60-second checkout</span>
+        <span>Built-in inventory tracking</span>
+        <span>Automatic sales reports</span>
+        <span>Staff payroll & commissions</span>
+      </div>
     </div>
-
+    <div class="appFrame">
+      <img src="assets/pos.png" alt="Carwash POS System — point of sale screen with a package selected and total calculated">
+      <div class="glow"></div>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section
-    id="about"
-    class="section"
->
-
-    <div class="container">
-
-        <div class="section-grid">
-
-            <div class="section-title">
-
-                <span>
-                    01
-                </span>
-
-                <h2>
-                    About
-                </h2>
-
-            </div>
-
-
-            <div class="section-content">
-
-                <p>
-
-                    I'm a Virtual Assistant and Business Support
-                    Specialist who helps businesses manage their
-                    data, reports, administrative tasks, and
-                    digital workflows.
-
-                </p>
-
-
-                <p>
-
-                    I can assist with data entry and encoding,
-                    Excel and Google Sheets reports, KPI reporting,
-                    dashboards, business documentation, and
-                    process-related tasks.
-
-                </p>
-
-
-                <p>
-
-                    I also build practical business solutions,
-                    including custom Point of Sale systems,
-                    spreadsheet-based tools, automated workflows,
-                    WordPress websites, and basic website setups.
-
-                </p>
-
-
-                <p>
-
-                    With a Lean Six Sigma Yellow Belt certification,
-                    I approach tasks with a focus on organization,
-                    efficiency, accuracy, and continuous improvement.
-
-                </p>
-
-            </div>
-
-        </div>
-
+<section class="darkBand" style="padding:56px 0">
+  <div class="container">
+    <div class="stats">
+      <div class="stat"><strong>Checkout</strong><span>Vehicle size → service → payment</span></div>
+      <div class="stat"><strong>Inventory</strong><span>Stock levels for oil, soap & supplies</span></div>
+      <div class="stat"><strong>Payroll</strong><span>Commission-based staff payouts</span></div>
+      <div class="stat"><strong>Reports</strong><span>Daily, weekly, monthly & yearly sales</span></div>
     </div>
-
+  </div>
 </section>
 
-
-
-<!-- =========================
-     SERVICES
-========================= -->
-
-<section
-    id="services"
-    class="section section-border"
->
-
-    <div class="container">
-
-        <div class="section-grid">
-
-            <div class="section-title">
-
-                <span>
-                    02
-                </span>
-
-                <h2>
-                    Services
-                </h2>
-
-            </div>
-
-
-            <div class="skills-list">
-
-
-                <div class="skill">
-                    Virtual Assistance
-                </div>
-
-
-                <div class="skill">
-                    Data Entry & Encoding
-                </div>
-
-
-                <div class="skill">
-                    Typing & Clerical Tasks
-                </div>
-
-
-                <div class="skill">
-                    Excel Reports
-                </div>
-
-
-                <div class="skill">
-                    Google Sheets
-                </div>
-
-
-                <div class="skill">
-                    Data Cleaning
-                </div>
-
-
-                <div class="skill">
-                    Dashboard Creation
-                </div>
-
-
-                <div class="skill">
-                    KPI Reporting
-                </div>
-
-
-                <div class="skill">
-                    Business Reporting
-                </div>
-
-
-                <div class="skill">
-                    POS System Development
-                </div>
-
-
-                <div class="skill">
-                    Google Apps Script
-                </div>
-
-
-                <div class="skill">
-                    Excel Automation
-                </div>
-
-
-                <div class="skill">
-                    WordPress Setup
-                </div>
-
-
-                <div class="skill">
-                    Website Setup
-                </div>
-
-
-                <div class="skill">
-                    Administrative Support
-                </div>
-
-
-                <div class="skill">
-                    Process Improvement
-                </div>
-
-            </div>
-
-        </div>
-
+<section id="features">
+  <div class="container">
+    <div class="sectionHead">
+      <div class="kicker">Everything a carwash needs</div>
+      <h2>One system, every job handled.</h2>
+      <p>Most POS software is built for retail counters, not carwash bays. This one is organized around vehicle sizes, wash packages, add-ons and the day-to-day of running the business.</p>
     </div>
-
+    <div class="features">
+      <article class="feature"><div class="icon">🚗</div><h3>Customer & vehicle capture</h3><p>Record the customer, contact number, plate number, brand, model and address before the wash starts.</p></article>
+      <article class="feature"><div class="icon">⚡</div><h3>Guided checkout</h3><p>Vehicle size, then individual services, packages or add-ons, then payment — no wasted taps at the counter.</p></article>
+      <article class="feature"><div class="icon">🧴</div><h3>Services, packages & pricing</h3><p>Set your own prices per vehicle size, bundle services into packages, and control commission rates per service.</p></article>
+      <article class="feature"><div class="icon">📦</div><h3>Inventory tracking</h3><p>Track stock of soap, wax, tools and supplies, watch remaining quantities, and flag low-stock items automatically.</p></article>
+      <article class="feature"><div class="icon">💰</div><h3>Payroll & commissions</h3><p>Pay staff based on the services they perform, using the commission rates you've already configured.</p></article>
+      <article class="feature"><div class="icon">🧾</div><h3>Receipt lookup & printing</h3><p>Search any past transaction by ID, plate or customer, and reprint a receipt in seconds.</p></article>
+      <article class="feature"><div class="icon">💳</div><h3>Multiple payment methods</h3><p>Accept cash, GCash, Maya or card, and apply discounts before the sale is finalized.</p></article>
+      <article class="feature"><div class="icon">📊</div><h3>Sales & business reports</h3><p>See today's sales, transaction counts, average ticket size, expenses and revenue trends over time.</p></article>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =========================
-     TOOLS & SKILLS
-========================= -->
-
-<section
-    class="section section-border"
->
-
-    <div class="container">
-
-        <div class="section-grid">
-
-            <div class="section-title">
-
-                <span>
-                    03
-                </span>
-
-                <h2>
-                    Tools
-                </h2>
-
-            </div>
-
-
-            <div class="skills-list">
-
-
-                <div class="skill">
-                    Microsoft Excel
-                </div>
-
-
-                <div class="skill">
-                    Google Sheets
-                </div>
-
-
-                <div class="skill">
-                    Power BI
-                </div>
-
-
-                <div class="skill">
-                    SQL
-                </div>
-
-
-                <div class="skill">
-                    Google Apps Script
-                </div>
-
-
-                <div class="skill">
-                    WordPress
-                </div>
-
-
-                <div class="skill">
-                    HTML
-                </div>
-
-
-                <div class="skill">
-                    CSS
-                </div>
-
-
-                <div class="skill">
-                    JavaScript
-                </div>
-
-
-                <div class="skill">
-                    Lean Six Sigma
-                </div>
-
-            </div>
-
-        </div>
-
+<section id="showcase">
+  <div class="container">
+    <div class="showcase">
+      <div class="copy">
+        <div class="kicker">01 — Point of sale</div>
+        <h2>Checkout that keeps the line moving.</h2>
+        <p>Your cashier shouldn't have to fight the software while a customer is waiting at the counter. The transaction screen walks through one clear sequence, every time.</p>
+        <ul class="checklist">
+          <li>Select the vehicle size</li>
+          <li>Choose individual services, a package, or both</li>
+          <li>Add optional add-ons</li>
+          <li>Apply a discount, if any</li>
+          <li>Choose the payment method</li>
+          <li>Submit and print the receipt</li>
+        </ul>
+        <a class="btn primary" href="#demo">Talk to us about your carwash</a>
+      </div>
+      <div>
+        <div class="shot"><img src="assets/pos.png" alt="Carwash POS System point of sale screen showing package selection and order summary"></div>
+        <div class="shotLabel">Point of Sale — a new transaction from vehicle to payment</div>
+      </div>
     </div>
-
+  </div>
 </section>
 
-
-
-<!-- =========================
-     PROJECTS
-========================= -->
-
-<section
-    id="projects"
-    class="section"
->
-
-    <div class="container">
-
-        <div class="section-grid">
-
-            <div class="section-title">
-
-                <span>
-                    04
-                </span>
-
-                <h2>
-                    Projects
-                </h2>
-
-            </div>
-
-
-            <div class="projects-list">
-
-
-<!-- POS PROJECT -->
-
-<article class="project">
-
-    <div class="project-number">
-        01
+<section class="darkBand">
+  <div class="container">
+    <div class="sectionHead">
+      <div class="kicker">02 — Reports & records</div>
+      <h2>Know exactly how the business is doing.</h2>
+      <p>Every completed transaction feeds straight into your reports. Check today's numbers, compare weeks and months, and pull up any past sale in seconds.</p>
     </div>
-
-
-    <div class="project-info">
-
-        <p class="project-type">
-            BUSINESS AUTOMATION
-        </p>
-
-
-        <h3>
-            Google Sheets Point of Sale System
-        </h3>
-
-
-        <p>
-
-            A web-based Point of Sale system built
-            using Google Sheets, Google Apps Script,
-            HTML, CSS, and JavaScript.
-
-            The system allows staff to process
-            orders through a custom interface while
-            automatically recording transaction data
-            in Google Sheets.
-
-        </p>
-
-
-        <div class="project-tools">
-
-            <span>
-                Google Sheets
-            </span>
-
-
-            <span>
-                Apps Script
-            </span>
-
-
-            <span>
-                HTML
-            </span>
-
-
-            <span>
-                CSS
-            </span>
-
-
-            <span>
-                JavaScript
-            </span>
-
-        </div>
-
-
-        <!-- PROJECT LINKS -->
-
-        <div class="project-links">
-
-            <a
-                href="projects/pos-system.html"
-                class="project-link"
-            >
-                View Case Study
-                <span>→</span>
-            </a>
-
-
-            <a
-                href="https://script.google.com/macros/s/AKfycbwav9YW29GMopA8cYQhqISd_ZA4iiDlzRoYdZSsUa-rw7Q_vBxkbmiNdYqQemiwITK1/exec"
-                class="project-link project-demo"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Try the Live Demo
-                <span>↗</span>
-            </a>
-
-                        <a
-                href="https://docs.google.com/spreadsheets/d/1I0Y2OY2Fp7gXWVSHvNv_N9PsYmYymr_bihAACojHSMQ/edit?usp=sharing"
-                class="project-link project-demo"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Database
-                <span>↗</span>
-            </a>
-
-        </div>
-
+    <div class="shot"><img src="assets/dashboard.png" alt="Carwash POS System overview dashboard with today's sales, monthly performance chart and daily, weekly and monthly detail"></div>
+    <div class="shotLabel" style="text-align:center">Overview — today's sales, monthly trends, and daily/weekly/monthly breakdowns</div>
+    <div class="altShots">
+      <div>
+        <div class="shot"><img src="assets/transactions.png" alt="Carwash POS System transactions list with search and filters by plate, date and car brand"></div>
+        <div class="shotLabel">Transactions — searchable history of every sale</div>
+      </div>
+      <div>
+        <div class="shot"><img src="assets/receipt.png" alt="Carwash POS System receipt printing screen with a sample sales invoice"></div>
+        <div class="shotLabel">Receipt printing — look up and reprint any receipt</div>
+      </div>
+      <div>
+        <div class="shot"><img src="assets/inventory.png" alt="Carwash POS System inventory screen tracking stock of soap, wax and supplies"></div>
+        <div class="shotLabel">Inventory — stock levels and low-stock alerts</div>
+      </div>
     </div>
-
-</article>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
+  </div>
 </section>
 
-
-
-<!-- =========================
-     WHAT I CAN HELP WITH
-========================= -->
-
-<section
-    class="section section-border"
->
-
-    <div class="container">
-
-        <div class="section-grid">
-
-            <div class="section-title">
-
-                <span>
-                    05
-                </span>
-
-                <h2>
-                    What I Can Help With
-                </h2>
-
-            </div>
-
-
-            <div class="section-content">
-
-
-                <h3>
-                    Administrative Support
-                </h3>
-
-                <p>
-
-                    Data entry, typing, encoding, document
-                    organization, spreadsheet maintenance,
-                    and other day-to-day clerical tasks.
-
-                </p>
-
-
-                <h3>
-                    Data & Reporting
-                </h3>
-
-                <p>
-
-                    Excel and Google Sheets reports, data
-                    cleaning, KPI reports, dashboards,
-                    data summaries, and business reporting.
-
-                </p>
-
-
-                <h3>
-                    Business Tools & Automation
-                </h3>
-
-                <p>
-
-                    Custom spreadsheet tools, automated
-                    workflows, Google Apps Script solutions,
-                    and simple systems designed to make
-                    repetitive tasks easier.
-
-                </p>
-
-
-                <h3>
-                    Website & Digital Support
-                </h3>
-
-                <p>
-
-                    WordPress setup, basic website setup,
-                    content updates, and general digital
-                    assistance for small businesses.
-
-                </p>
-
-            </div>
-
-        </div>
-
+<section id="settings-showcase">
+  <div class="container">
+    <div class="showcase reverse">
+      <div class="copy">
+        <div class="kicker">03 — Services & pricing</div>
+        <h2>Your price list, your rules.</h2>
+        <p>Every carwash prices differently by vehicle size. Configure services, packages and add-ons once, and the correct price shows up automatically at checkout — no spreadsheet to maintain on the side.</p>
+        <ul class="checklist">
+          <li>Set prices per vehicle size, from Small to XXX-Large</li>
+          <li>Bundle services into packages with their own pricing</li>
+          <li>Attach a commission percentage to each service</li>
+          <li>Turn services on or off without deleting them</li>
+        </ul>
+        <a class="btn ghost" href="#pricing">See pricing</a>
+      </div>
+      <div class="shotWrap">
+        <div class="shot"><img src="assets/settings.png" alt="Carwash POS System settings screen listing services, prices per vehicle size and commission percentages"></div>
+        <div class="shotLabel">Settings — services, packages and add-ons in one table</div>
+      </div>
     </div>
-
+  </div>
 </section>
 
-
-
-<!-- =========================
-     CERTIFICATION
-========================= -->
-
-<section
-    class="section section-border"
->
-
-    <div class="container">
-
-        <div class="section-grid">
-
-            <div class="section-title">
-
-                <span>
-                    06
-                </span>
-
-                <h2>
-                    Certification
-                </h2>
-
-            </div>
-
-
-            <div class="section-content">
-
-                <h3>
-                    Lean Six Sigma Yellow Belt
-                </h3>
-
-
-                <p>
-
-                    Certified in Lean Six Sigma principles,
-                    process improvement, root cause analysis,
-                    waste reduction, and continuous improvement.
-
-                </p>
-
-            </div>
-
-        </div>
-
+<section id="workflow">
+  <div class="container">
+    <div class="sectionHead">
+      <div class="kicker">Simple to adopt</div>
+      <h2>From vehicle arrival to a closed book.</h2>
+      <p>No thick training manual required. The workflow follows what your staff are already doing every day — it just gets recorded properly.</p>
     </div>
-
+    <div class="workflow">
+      <article class="step"><div class="num">STEP 01</div><h3>Log the vehicle</h3><p>Record the customer, plate number, vehicle brand and the employee assigned to the job.</p></article>
+      <article class="step"><div class="num">STEP 02</div><h3>Pick the service</h3><p>Choose the vehicle size, then a package, individual services, or add-ons.</p></article>
+      <article class="step"><div class="num">STEP 03</div><h3>Take the payment</h3><p>Apply a discount if needed and record cash, GCash, Maya or card.</p></article>
+      <article class="step"><div class="num">STEP 04</div><h3>Run the back office</h3><p>Track inventory, process payroll, and review sales reports whenever you need to.</p></article>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section
-    id="contact"
-    class="section contact-section"
->
-
-    <div class="container">
-
-        <p class="hero-label">
-            AVAILABLE FOR WORK
-        </p>
-
-
-        <h2>
-            Let's work together.
-        </h2>
-
-
-        <p>
-
-            Have a project, task, or business process
-            you need help with?
-
-            Send me a message and I'll get back to you.
-
-        </p>
-
-
-        <!-- =========================
-             CONTACT FORM
-        ========================= -->
-
-       <form
-    id="contact-form"
-    action="https://formspree.io/f/xqergwjq"
-    method="POST"
-    class="contact-form"
->
-
-    <input
-        type="hidden"
-        name="_subject"
-        value="New Portfolio Inquiry from Charles"
-    >
-
-
-    <div class="form-group">
-
-        <label for="name">
-            Name
-        </label>
-
-        <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your name"
-            autocomplete="name"
-            required
-        >
-
+<section class="darkBand">
+  <div class="container">
+    <div class="testimonial">
+      <p>No more closing the day with a notebook and a calculator. Every transaction, every peso and every staff commission is accounted for the moment the sale is submitted — ready to review the second you need it.</p>
+      <div class="who">What changes on day one with Carwash POS System</div>
     </div>
-
-
-    <div class="form-group">
-
-        <label for="email">
-            Email Address
-        </label>
-
-        <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="your@email.com"
-            autocomplete="email"
-            required
-        >
-
-    </div>
-
-
-    <div class="form-group">
-
-        <label for="message">
-            Message
-        </label>
-
-        <textarea
-            id="message"
-            name="message"
-            rows="6"
-            placeholder="Tell me about your project or inquiry..."
-            required
-        ></textarea>
-
-    </div>
-
-
-    <button
-        type="submit"
-        class="form-submit"
-        id="submit-button"
-    >
-        Send Inquiry →
-    </button>
-
-
-    <p
-        id="form-status"
-        class="form-status"
-    ></p>
-
-</form>
-
-
-        <!-- =========================
-             DIRECT EMAIL
-        ========================= -->
-
-        <div class="contact-email">
-
-            <p>
-                Prefer to email me directly?
-            </p>
-
-
-            <a
-                href="mailto:charlesenrickcajan@gmail.com"
-            >
-                charlesenrickcajan@gmail.com
-            </a>
-
-        </div>
-
-
-        <!-- =========================
-             SOCIAL LINKS
-        ========================= -->
-
-        <div class="contact-links">
-
-            <a
-                href="https://github.com/cajancharles"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GitHub
-            </a>
-
-
-            <a
-                href="https://www.facebook.com/CharlesGPT/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Facebook
-            </a>
-
-        </div>
-
-    </div>
-
+  </div>
 </section>
 
+<section id="pricing">
+  <div class="container">
+    <div class="sectionHead">
+      <div class="kicker">Simple pricing</div>
+      <h2>One payment. Lifetime access.</h2>
+      <p>No subscriptions, no per-branch fees, no surprise renewals. Pay once and the system is yours to run for as long as your carwash is open.</p>
+    </div>
+    <div style="max-width:520px;margin:auto">
+      <div class="feature" style="text-align:center;padding:42px 30px;border-color:rgba(85,214,255,.28);background:radial-gradient(circle at 50% 0%,rgba(85,214,255,.12),rgba(255,255,255,.025) 45%)">
+        <div class="kicker">Lifetime license</div>
+        <div style="font-size:54px;line-height:1.1;font-weight:800;letter-spacing:-.04em;margin:12px 0 5px">₱10,000</div>
+        <div style="color:var(--muted);font-size:14px;margin-bottom:24px">One-time payment · no monthly fees</div>
+        <ul class="checklist" style="text-align:left;max-width:320px;margin:0 auto 28px">
+          <li>Lifetime access to the full system</li>
+          <li>Point of sale, built for carwash checkout</li>
+          <li>Customer & vehicle records</li>
+          <li>Services, packages & add-on pricing control</li>
+          <li>Inventory & low-stock tracking</li>
+          <li>Payroll with per-service commissions</li>
+          <li>Sales, expense & revenue reporting</li>
+          <li>Receipt lookup & printing</li>
+        </ul>
+        <a class="btn primary" href="mailto:charlesenrickcajan@gmail.com?subject=Carwash%20POS%20System%20-%20Lifetime%20License">Email to get started →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section id="demo">
+  <div class="container">
+    <div class="cta">
+      <div class="kicker">Ready for a better workflow?</div>
+      <h2>Give your carwash a system built for the job.</h2>
+      <p>Book a walkthrough and see how Carwash POS System handles checkout, inventory, payroll and reporting for a business like yours.</p>
+      <div class="heroBtns" style="justify-content:center">
+        <a class="btn primary" href="mailto:charlesenrickcajan@gmail.com?subject=Carwash%20POS%20System%20Inquiry">Request a demo →</a>
+        <a class="btn ghost" href="https://m.me/charlesgpt" target="_blank" rel="noopener">Message on Messenger</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<section id="disclaimer" style="padding:20px 0 50px">
+  <div class="container">
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px 24px;background:rgba(255,255,255,.025);color:#9eb0bd;font-size:12px;line-height:1.65">
+      <strong style="color:#dce6eb">Disclaimer:</strong> Carwash POS System is a business management tool for recording transactions, tracking inventory, processing payroll and generating sales reports for car wash operators. Screenshots on this page show sample data from a demo environment. Receipts generated by the system are sales invoices for internal record-keeping and are not a substitute for official BIR-registered receipts; store owners remain responsible for complying with applicable tax and business regulations.
+    </div>
+  </div>
+</section>
+
+</main>
 
 <footer>
-
-    <div class="container">
-
-        <p>
-
-            <img
-                src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fcajancharles.github.io%2F&label=Visitors.&icon=github&color=%23198754&message=&style=flat&tz=Asia%2FManila"
-                alt="Visitor counter"
-            >
-
-        </p>
-
-
-        <p>
-
-            © 2026 Charles. All rights reserved.
-
-        </p>
-
-    </div>
-
+  <div class="container footerin">
+    <div><strong style="color:white">Carwash POS System</strong> — Point of Sale for car wash businesses</div>
+    <div>© 2026 Carwash POS System. All rights reserved.</div>
+  </div>
 </footer>
 
-    <script>
-
-const contactForm = document.getElementById("contact-form");
-
-const submitButton = document.getElementById("submit-button");
-
-const formStatus = document.getElementById("form-status");
-
-
-contactForm.addEventListener("submit", async function(event) {
-
-    event.preventDefault();
-
-
-    // Change button text while sending
-
-    submitButton.disabled = true;
-
-    submitButton.textContent = "Sending...";
-
-
-    const formData = new FormData(contactForm);
-
-
-    try {
-
-        const response = await fetch(
-            contactForm.action,
-            {
-                method: "POST",
-                body: formData,
-                headers: {
-                    "Accept": "application/json"
-                }
-            }
-        );
-
-
-        if (response.ok) {
-
-            // Clear all form fields
-
-            contactForm.reset();
-
-
-            // Show success message
-
-            formStatus.textContent =
-                "Thank you! Your message has been sent successfully.";
-
-            formStatus.className =
-                "form-status success";
-
-
-            // Reset button
-
-            submitButton.disabled = false;
-
-            submitButton.textContent =
-                "Send Inquiry →";
-
-
-        } else {
-
-            throw new Error(
-                "There was a problem submitting the form."
-            );
-
-        }
-
-
-    } catch (error) {
-
-        formStatus.textContent =
-            "Something went wrong. Please try again or email me directly.";
-
-        formStatus.className =
-            "form-status error";
-
-
-        submitButton.disabled = false;
-
-        submitButton.textContent =
-            "Send Inquiry →";
-
-    }
-
-});
-
-</script>
-
 </body>
-
 </html>
