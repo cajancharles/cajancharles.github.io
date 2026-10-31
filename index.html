@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carwash POS System — Point of Sale Software for Car Wash Businesses</title>
 <meta name="description" content="Carwash POS System is a complete point of sale built for car wash businesses in the Philippines. Run checkout, track inventory, manage payroll and see sales reports — all in one system.">
-<meta name="theme-color" content="#071018">
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Carwash POS System — Point of Sale for Car Wash Businesses">
@@ -13,160 +13,181 @@
 <meta property="og:image" content="assets/dashboard.png">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23071018'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle'%3E%F0%9F%9A%97%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b7db5'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle'%3E%F0%9F%9A%97%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#071018;
-  --bg2:#0b1720;
-  --card:#0f1d27;
-  --card2:#122431;
-  --text:#f5f8fb;
-  --muted:#9eb0bd;
-  --line:rgba(255,255,255,.09);
-  --accent:#55d6ff;
-  --accent2:#7b8cff;
-  --green:#62e6a8;
+  --bg:#ffffff;
+  --bg2:#f4f7fa;
+  --text:#0f1b24;
+  --muted:#566673;
+  --line:#dfe6ec;
+  --accent:#0b7db5;
+  --accent-dark:#096896;
+  --green:#16915f;
+  --navy:#0f2a3d;
   --max:1180px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;background:
-  radial-gradient(circle at 80% 10%,rgba(85,214,255,.12),transparent 30%),
-  radial-gradient(circle at 15% 25%,rgba(123,140,255,.12),transparent 28%),
-  var(--bg);
-  color:var(--text);font-family:"DM Sans",system-ui,sans-serif;line-height:1.5;
-}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",system-ui,sans-serif;line-height:1.5}
 a{color:inherit;text-decoration:none}
 .container{width:min(var(--max),calc(100% - 40px));margin:auto}
-nav{
-  position:sticky;top:0;z-index:30;
-  backdrop-filter:blur(18px);
-  background:rgba(7,16,24,.78);
-  border-bottom:1px solid var(--line);
-}
-.navin{height:76px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:800;letter-spacing:-.04em;font-size:19px;display:flex;align-items:center;gap:9px}
+nav{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.03em;font-size:19px;display:flex;align-items:center;gap:9px}
 .logo span{color:var(--accent)}
-.navlinks{display:flex;gap:28px;color:#b8c7d1;font-size:14px}
-.navlinks a:hover{color:white}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:13px 20px;border-radius:10px;font-weight:700;font-size:14px;
-  border:1px solid var(--line);transition:.2s;cursor:pointer
-}
-.btn.primary{background:var(--accent);color:#031018;border-color:var(--accent);box-shadow:0 8px 30px rgba(85,214,255,.18)}
-.btn.primary:hover{transform:translateY(-2px);filter:brightness(1.05)}
-.btn.ghost{background:rgba(255,255,255,.035)}
-.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.navlinks{display:flex;gap:26px;color:var(--muted);font-size:14px;font-weight:500}
+.navlinks a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:8px;font-weight:700;font-size:14px;border:1px solid var(--line);transition:background .15s,border-color .15s;cursor:pointer;font-family:inherit}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn.primary:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.btn.ghost{background:#fff;color:var(--text)}
+.btn.ghost:hover{background:var(--bg2);border-color:#c9d4dc}
 .navRight{display:flex;align-items:center;gap:10px}
-.hero{padding:88px 0 76px;position:relative;overflow:hidden}
-.heroGrid{display:grid;grid-template-columns:1.02fr .98fr;gap:60px;align-items:center}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(85,214,255,.2);
-  background:rgba(85,214,255,.07);color:#9fe8ff;padding:7px 12px;border-radius:99px;
-  font-size:13px;font-weight:600
-}
-h1{font-size:clamp(40px,5.6vw,68px);line-height:1.02;letter-spacing:-.045em;margin:22px 0}
-h1 .grad{background:linear-gradient(90deg,#fff 15%,#72ddff 70%,#8493ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{font-size:18px;color:var(--muted);max-width:600px;margin:0 0 30px}
+.hero{padding:80px 0 72px;position:relative;overflow:hidden;background:var(--bg2);border-bottom:1px solid var(--line)}
+.heroGrid{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #bfdff0;background:#e7f3fa;color:var(--accent-dark);padding:6px 12px;border-radius:6px;font-size:13px;font-weight:700}
+h1{font-size:clamp(38px,5.2vw,62px);line-height:1.04;letter-spacing:-.04em;margin:20px 0;color:var(--text)}
+h1 .grad{color:var(--accent)}
+.hero p{font-size:18px;color:var(--muted);max-width:600px;margin:0 0 28px}
 .heroBtns{display:flex;gap:12px;flex-wrap:wrap}
-.priceNote{color:#7c8f9b;font-size:13px;margin-top:10px}
-.micro{display:grid;grid-template-columns:repeat(2,auto);gap:12px 26px;margin-top:30px;color:#c3d2db;font-size:14px}
+.priceNote{color:var(--muted);font-size:13.5px;margin-top:12px}
+.micro{display:grid;grid-template-columns:repeat(2,auto);gap:12px 26px;margin-top:28px;color:var(--text);font-size:14px;font-weight:500}
 .micro span{display:flex;align-items:center}
 .micro span::before{content:"✓";color:var(--green);font-weight:800;margin-right:9px}
-.appFrame{
-  position:relative;border:1px solid rgba(255,255,255,.13);border-radius:18px;
-  padding:9px;background:rgba(255,255,255,.045);box-shadow:0 35px 90px rgba(0,0,0,.45);
-}
-.appFrame img{width:100%;display:block;border-radius:11px}
-.glow{position:absolute;inset:auto 10% -12% 10%;height:120px;background:var(--accent);filter:blur(80px);opacity:.18;z-index:-1}
-section{padding:88px 0}
-.sectionHead{text-align:center;max-width:700px;margin:0 auto 46px}
-.kicker{color:var(--accent);font-size:13px;font-weight:700}
-h2{font-size:clamp(30px,3.6vw,44px);line-height:1.1;letter-spacing:-.03em;margin:10px 0}
+.appFrame{position:relative;border:1px solid var(--line);border-radius:12px;padding:8px;background:#fff}
+.appFrame img{width:100%;display:block;border-radius:6px}
+.glow{display:none}
+section{padding:80px 0}
+.sectionHead{text-align:center;max-width:700px;margin:0 auto 44px}
+.kicker{color:var(--accent);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+h2{font-size:clamp(28px,3.4vw,40px);line-height:1.12;letter-spacing:-.03em;margin:10px 0;color:var(--text)}
 .sectionHead p{color:var(--muted);font-size:16px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(255,255,255,.025)}
-.stat{padding:25px;border-right:1px solid var(--line);text-align:center}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.stat{padding:24px;border-right:1px solid var(--line);text-align:center}
 .stat:last-child{border:0}
-.stat strong{display:block;font-size:20px}.stat span{font-size:13px;color:var(--muted)}
+.stat strong{display:block;font-size:19px}.stat span{font-size:13px;color:var(--muted)}
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.feature{background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:16px;padding:24px}
-.icon{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:rgba(85,214,255,.1);color:var(--accent);font-size:19px;margin-bottom:16px}
+.feature{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+.icon{width:40px;height:40px;border-radius:8px;display:grid;place-items:center;background:#e7f3fa;color:var(--accent);font-size:19px;margin-bottom:16px}
 .feature h3{margin:0 0 7px;font-size:16px}.feature p{margin:0;color:var(--muted);font-size:13.5px}
 .showcase{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}
 .showcase.reverse .copy{order:2}.showcase.reverse .shotWrap{order:1}
 .copy p{color:var(--muted);font-size:16px}.checklist{padding:0;margin:22px 0;list-style:none}
-.checklist li{margin:11px 0;color:#d8e3e9;font-size:15px}.checklist li:before{content:"✓";color:var(--green);margin-right:10px;font-weight:800}
-.shot{border:1px solid var(--line);background:#0b1117;padding:10px;border-radius:16px;box-shadow:0 30px 70px rgba(0,0,0,.35)}
-.shot img{display:block;width:100%;border-radius:9px}
-.shotLabel{font-size:12px;color:var(--muted);margin:10px 2px 0}
+.checklist li{margin:11px 0;color:var(--text);font-size:15px}.checklist li:before{content:"✓";color:var(--green);margin-right:10px;font-weight:800}
+.shot{border:1px solid var(--line);background:#fff;padding:8px;border-radius:12px}
+.shot img{display:block;width:100%;border-radius:6px}
+.shotLabel{font-size:12.5px;color:var(--muted);margin:10px 2px 0}
 .altShots{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
 .workflow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.step{position:relative;padding:24px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}
+.step{position:relative;padding:24px;border:1px solid var(--line);border-radius:12px;background:#fff}
 .num{font-size:13px;color:var(--accent);font-weight:700}.step h3{font-size:16px;margin:10px 0 5px}.step p{font-size:13.5px;color:var(--muted);margin:0}
-.darkBand{background:linear-gradient(180deg,transparent,rgba(85,214,255,.035),transparent)}
-.testimonial{border:1px solid var(--line);border-radius:20px;padding:40px;background:rgba(255,255,255,.025);max-width:760px;margin:0 auto;text-align:center}
-.testimonial p{font-size:20px;line-height:1.5;color:#e7eff3;margin:0 0 18px}
+.altBand{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.testimonial{border:1px solid var(--line);border-radius:14px;padding:40px;background:#fff;max-width:760px;margin:0 auto;text-align:center}
+.testimonial p{font-size:20px;line-height:1.5;color:var(--text);margin:0 0 18px}
 .testimonial .who{color:var(--muted);font-size:14px}
-.cta{
-  border:1px solid rgba(85,214,255,.2);border-radius:24px;padding:60px;
-  background:radial-gradient(circle at 85% 20%,rgba(85,214,255,.12),transparent 35%),rgba(255,255,255,.025);
-  text-align:center
-}
-.cta p{color:var(--muted);max-width:600px;margin:0 auto 25px}
-footer{border-top:1px solid var(--line);padding:30px 0;color:#81919b;font-size:13px}
+.cta{border-radius:16px;padding:56px;background:var(--navy);text-align:center;color:#fff}
+.cta h2{color:#fff}
+.cta .kicker{color:#7fd3f5}
+.cta p{color:#c7d8e3;max-width:600px;margin:0 auto 25px}
+.cta .btn.primary{background:#fff;color:var(--navy);border-color:#fff}
+.cta .btn.primary:hover{background:#e7f3fa;border-color:#e7f3fa}
+.cta .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.cta .btn.ghost:hover{background:rgba(255,255,255,.1)}
+footer{border-top:1px solid var(--line);background:var(--bg2);padding:30px 0;color:var(--muted);font-size:13px}
 .footerin{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .mobileMenu{display:none}
 
 .contactGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:980px;margin:0 auto}
-.contactCard{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:26px 18px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.02));transition:.2s;word-break:break-word}
-.contactCard:hover{transform:translateY(-3px);border-color:rgba(85,214,255,.4);background:rgba(85,214,255,.06)}
+.contactCard{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:26px 18px;border:1px solid var(--line);border-radius:12px;background:#fff;transition:border-color .15s,background .15s;word-break:break-word}
+.contactCard:hover{border-color:var(--accent);background:#f4f9fc}
 .contactCard .icon{margin-bottom:8px}
 .contactCard strong{font-size:15px}
 .contactCard span{font-size:13px;color:var(--muted)}
 .footerLinks{display:flex;gap:16px;flex-wrap:wrap}
-.footerLinks a:hover{color:white}
-.customNote{max-width:820px;margin:0 auto;text-align:center;border:1px solid rgba(85,214,255,.22);border-radius:20px;padding:36px 32px;background:radial-gradient(circle at 50% 0%,rgba(85,214,255,.1),rgba(255,255,255,.025) 60%)}
-.customNote h2{font-size:clamp(24px,3vw,34px);margin:8px 0 12px}
+.footerLinks a:hover{color:var(--text)}
+.customNote{max-width:820px;margin:0 auto;text-align:center;border:1px solid #bfdff0;border-radius:14px;padding:36px 32px;background:#eaf5fb}
+.customNote h2{font-size:clamp(24px,3vw,32px);margin:8px 0 12px}
 .customNote p{color:var(--muted);margin:0 auto 20px;max-width:620px}
 .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 22px}
-.tags span{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:99px;padding:6px 14px;font-size:13px;color:#d8e3e9}
+.tags span{border:1px solid var(--line);background:#fff;border-radius:6px;padding:6px 14px;font-size:13px;color:var(--text)}
+.promoBar{background:var(--navy);text-align:center;padding:9px 14px;font-size:13.5px;color:#e6f2f9}
+.promoBar b{color:#ffd08a}
+.promoBar a{margin-left:10px;color:var(--navy);background:#fff;padding:4px 12px;border-radius:6px;font-weight:700;font-size:12.5px;white-space:nowrap}
+.cd{display:inline-flex;gap:6px;margin:0 6px;vertical-align:middle}
+.cd span{background:rgba(255,255,255,.12);border-radius:6px;padding:2px 7px;font-weight:700;font-variant-numeric:tabular-nums;font-size:13px}
+.cd.big{display:flex;justify-content:center;gap:10px;margin:0 0 18px}
+.cd.big span{background:var(--bg2);border:1px solid var(--line);color:var(--text);padding:8px 12px;font-size:20px;border-radius:8px;min-width:58px}
+.cd.big span small{display:block;font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:980px;margin:0 auto}
+.cmpCol{border:1px solid var(--line);border-radius:14px;padding:28px;background:#fff}
+.cmpCol.before{border-color:#f0c9c9;background:#fff6f6}
+.cmpCol.after{border-color:#bfe5d1;background:#f1faf5}
+.cmpTag{font-weight:700;font-size:15px;margin-bottom:14px}
+.cmpCol ul{list-style:none;margin:0;padding:0}
+.cmpCol li{padding:10px 0 10px 28px;position:relative;color:var(--text);font-size:14.5px;border-top:1px solid rgba(15,27,36,.08)}
+.cmpCol li:first-child{border-top:0}
+.cmpCol.before li:before{content:"✕";position:absolute;left:0;color:#d64545;font-weight:800}
+.cmpCol.after li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+.painGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:980px;margin:18px auto 0}
+.pain{border:1px solid var(--line);border-radius:12px;padding:22px;background:#fff}
+.pain h3{margin:0 0 6px;font-size:15px}.pain p{margin:0;color:var(--muted);font-size:13.5px}
+.faq{max-width:780px;margin:0 auto;display:grid;gap:10px}
+.faq details{border:1px solid var(--line);border-radius:10px;background:#fff;padding:0 20px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:600;font-size:15.5px;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--accent);font-size:20px;line-height:1}
+.faq details[open] summary:after{content:"–"}
+.faq details p{margin:0 0 18px;color:var(--muted);font-size:14.5px}
+@media(max-width:900px){
+  .compare,.painGrid{grid-template-columns:1fr}
+  .navlinks.open{display:flex;flex-direction:column;gap:0;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:8px 20px 14px}
+  .navlinks.open a{padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+}
 @media(max-width:900px){
   .navlinks{display:none}.mobileMenu{display:inline-flex}
   .heroGrid,.showcase{grid-template-columns:1fr}
   .showcase.reverse .copy,.showcase.reverse .shotWrap{order:0}
-  .hero{padding-top:60px}
+  .hero{padding-top:56px}
   .features{grid-template-columns:1fr 1fr}.workflow{grid-template-columns:1fr 1fr}
   .altShots{grid-template-columns:1fr 1fr}.contactGrid{grid-template-columns:1fr 1fr}
   .micro{grid-template-columns:1fr}
 }
 @media(max-width:620px){
   .container{width:min(var(--max),calc(100% - 28px))}
-  .navin{height:66px}.navin .btn.primary{display:none}
-  h1{font-size:42px}.hero p{font-size:16px}
-  section{padding:60px 0}.features,.workflow,.stats{grid-template-columns:1fr}
+  .navin{height:64px}.navin .btn.primary{display:none}
+  h1{font-size:40px}.hero p{font-size:16px}
+  section{padding:56px 0}.features,.workflow,.stats{grid-template-columns:1fr}
   .stat{border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}
   .altShots{grid-template-columns:1fr}.contactGrid{grid-template-columns:1fr}.cta{padding:34px 20px}
   .testimonial{padding:28px}
+  .cd.big span{min-width:50px;padding:8px}
   .footerin{flex-direction:column}
 }
 </style>
 </head>
 <body>
 
+<div class="promoBar promo-only" id="promoBar">
+  🔥 <b>30% off lifetime license</b> — ends <b>November 15, 2026</b>
+  <span class="cd" id="cdMini"><span id="mD">--d</span><span id="mH">--h</span><span id="mM">--m</span><span id="mS">--s</span></span>
+  <a href="#pricing">Claim the discount</a>
+</div>
+
 <nav>
   <div class="container navin">
     <a class="logo" href="#">🚗 Carwash <span>POS System</span></a>
     <div class="navlinks">
+      <a href="#problem">Why switch</a>
       <a href="#features">Features</a>
       <a href="#showcase">Product tour</a>
       <a href="#workflow">How it works</a>
       <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="navRight">
@@ -187,7 +208,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#81919b;font-size:1
         <a class="btn primary" href="https://script.google.com/macros/s/AKfycbwuPHX2gT5dBm05s4pNNNcfWLsP1GjEmOoE5k760rMn3SDWKkCgx2A4jeJ6hyJY8dIR3A/exec" target="_blank" rel="noopener">Try the live demo →</a>
         <a class="btn ghost" href="#showcase">See it in action</a>
       </div>
-      <div class="priceNote"><s style="opacity:.6">₱10,000</s> ₱7,000 one-time license (30% off, limited time) · lifetime access · no monthly fees</div>
+      <div class="priceNote" id="heroPrice"><s style="opacity:.6">₱10,000</s> <b style="color:var(--text)">₱7,000</b> one-time license · <span style="color:#b45f06;font-weight:600">30% off until November 15, 2026</span> · lifetime access · no monthly fees</div>
       <div class="priceNote">The live demo runs on randomized sample data. The prices, commissions, and services shown are all editable in your own setup.</div>
       <div class="micro">
         <span>60-second checkout</span>
@@ -203,13 +224,55 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#81919b;font-size:1
   </div>
 </section>
 
-<section class="darkBand" style="padding:56px 0">
+<section class="altBand" style="padding:56px 0">
   <div class="container">
     <div class="stats">
       <div class="stat"><strong>Checkout</strong><span>Vehicle size → service → payment</span></div>
       <div class="stat"><strong>Inventory</strong><span>Stock levels for oil, soap, and supplies</span></div>
       <div class="stat"><strong>Payroll</strong><span>Commission-based staff payouts</span></div>
       <div class="stat"><strong>Reports</strong><span>Daily, weekly, monthly, and yearly sales</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="problem">
+  <div class="container">
+    <div class="sectionHead">
+      <div class="kicker">Sound familiar?</div>
+      <h2>Still writing every sale in a notebook?</h2>
+      <p>Many car washes still run on a logbook, a calculator and a pile of receipts. It works, until a page goes missing, the totals don't match, or you're tallying commissions at midnight.</p>
+    </div>
+    <div class="compare">
+      <div class="cmpCol before">
+        <div class="cmpTag">😩 Before: notebook &amp; calculator</div>
+        <ul>
+          <li>Every car, plate number and payment written by hand</li>
+          <li>Illegible entries, skipped lines, and lost pages</li>
+          <li>Month-end totals added up manually, with errors</li>
+          <li>Staff commissions computed by hand, and disputed</li>
+          <li>Supplies run out because nobody tracked the stock</li>
+          <li>No idea how much you earned today until you close</li>
+        </ul>
+      </div>
+      <div class="cmpCol after">
+        <div class="cmpTag">😎 After: Carwash POS System</div>
+        <ul>
+          <li>One checkout screen records the vehicle, services and payment</li>
+          <li>Every transaction saved and searchable by plate or customer</li>
+          <li>Daily, weekly, monthly and yearly totals computed for you</li>
+          <li>Commissions calculated from the rates you set</li>
+          <li>Stock levels tracked, with low-stock alerts</li>
+          <li>Today's sales visible the moment each sale is submitted</li>
+        </ul>
+      </div>
+    </div>
+    <div class="painGrid">
+      <div class="pain"><h3>📓 Handwritten records get lost</h3><p>Notebooks get wet, torn or misplaced. Digital records stay put and can be looked up anytime.</p></div>
+      <div class="pain"><h3>⏱️ Closing the day takes too long</h3><p>Stop re-adding pages of sales. Your totals are already there when the last car leaves.</p></div>
+      <div class="pain"><h3>🤝 Fair, transparent payouts</h3><p>When commissions come straight from recorded jobs, there's less arguing over who did what.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:30px">
+      <a class="btn primary" href="https://script.google.com/macros/s/AKfycbwuPHX2gT5dBm05s4pNNNcfWLsP1GjEmOoE5k760rMn3SDWKkCgx2A4jeJ6hyJY8dIR3A/exec" target="_blank" rel="noopener">See how it replaces your notebook →</a>
     </div>
   </div>
 </section>
@@ -259,13 +322,13 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#81919b;font-size:1
   </div>
 </section>
 
-<section class="darkBand">
+<section class="altBand">
   <div class="container">
     <div class="sectionHead">
       <div class="kicker">02 — Reports & records</div>
       <h2>Know exactly how the business is doing.</h2>
       <p>Every completed transaction feeds straight into your reports. Check today's numbers, compare weeks and months, and pull up any past sale in seconds.</p>
-      <p style="font-size:14px;margin-top:4px"><a href="https://docs.google.com/spreadsheets/d/1op20wy3WUa70XN4pXWt2zLRYUpI8mG91AfCGZJM5gbc/edit?usp=sharing" target="_blank" rel="noopener" style="color:var(--accent);border-bottom:1px solid rgba(85,214,255,.35)">Browse the underlying sample data (view-only) →</a></p>
+      <p style="font-size:14px;margin-top:4px"><a href="https://docs.google.com/spreadsheets/d/1op20wy3WUa70XN4pXWt2zLRYUpI8mG91AfCGZJM5gbc/edit?usp=sharing" target="_blank" rel="noopener" style="color:var(--accent);border-bottom:1px solid rgba(11,125,181,.35)">Browse the underlying sample data (view-only) →</a></p>
     </div>
     <div class="shot"><img src="assets/dashboard.png" alt="Carwash POS System overview dashboard with today's sales, monthly performance chart and daily, weekly and monthly detail"></div>
     <div class="shotLabel" style="text-align:center">Overview — today's sales, monthly trends, and daily/weekly/monthly breakdowns</div>
@@ -325,7 +388,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#81919b;font-size:1
   </div>
 </section>
 
-<section class="darkBand">
+<section class="altBand">
   <div class="container">
     <div class="testimonial">
       <p>No more closing the day with a notebook and a calculator. Every transaction, every peso and every staff commission is accounted for the moment the sale is submitted — ready to review the second you need it.</p>
@@ -342,15 +405,16 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#81919b;font-size:1
       <p>No subscriptions, no per-branch fees, no surprise renewals. Pay once and the system is yours to run for as long as your car wash is open.</p>
     </div>
     <div style="max-width:520px;margin:auto">
-      <div class="feature" style="text-align:center;padding:42px 30px;border-color:rgba(85,214,255,.28);background:radial-gradient(circle at 50% 0%,rgba(85,214,255,.12),rgba(255,255,255,.025) 45%)">
-        <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,159,67,.12);color:#ffb976;border:1px solid rgba(255,159,67,.35);border-radius:99px;padding:5px 13px;font-size:12px;font-weight:700;margin-bottom:14px">⏳ Limited-time offer — price goes back up soon</div>
+      <div class="feature" style="text-align:center;padding:42px 30px;border:2px solid var(--accent);background:#fff">
+        <div class="promo-only" style="display:inline-flex;align-items:center;gap:6px;background:#fff4e5;color:#b45f06;border:1px solid #f5c58a;border-radius:6px;padding:5px 13px;font-size:12px;font-weight:700;margin-bottom:14px">⏳ Limited-time offer — ends November 15, 2026</div>
+        <div class="cd big promo-only"><span id="bD">--<small>Days</small></span><span id="bH">--<small>Hours</small></span><span id="bM">--<small>Min</small></span><span id="bS">--<small>Sec</small></span></div>
         <div class="kicker">Lifetime license</div>
-        <div style="margin-top:12px">
+        <div class="promo-only" style="margin-top:12px">
           <span style="font-size:20px;color:var(--muted);text-decoration:line-through">₱10,000</span>
-          <span style="display:inline-block;margin-left:8px;background:rgba(98,230,168,.12);color:var(--green);border:1px solid rgba(98,230,168,.3);border-radius:99px;padding:4px 10px;font-size:12px;font-weight:700;vertical-align:middle">30% OFF</span>
+          <span style="display:inline-block;margin-left:8px;background:#e6f7ee;color:var(--green);border:1px solid #b6e4cd;border-radius:6px;padding:4px 10px;font-size:12px;font-weight:700;vertical-align:middle">30% OFF</span>
         </div>
-        <div style="font-size:54px;line-height:1.1;font-weight:800;letter-spacing:-.04em;margin:6px 0 5px">₱7,000</div>
-        <div style="color:var(--muted);font-size:14px;margin-bottom:24px">One-time payment · no monthly fees · offer ends soon</div>
+        <div id="priceMain" style="font-size:54px;line-height:1.1;font-weight:800;letter-spacing:-.04em;margin:6px 0 5px">₱7,000</div>
+        <div id="priceSub" style="color:var(--muted);font-size:14px;margin-bottom:24px">One-time payment · no monthly fees · discount valid until November 15, 2026</div>
         <ul class="checklist" style="text-align:left;max-width:320px;margin:0 auto 28px">
           <li>Lifetime access to the full system</li>
           <li>Point of sale, built for car wash checkout</li>
@@ -363,6 +427,23 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#81919b;font-size:1
         </ul>
         <a class="btn primary" href="https://m.me/charlesgpt">Message me to get started →</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="sectionHead">
+      <div class="kicker">FAQ</div>
+      <h2>Quick answers before you decide.</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Is it really a one-time payment?</summary><p>Yes. You pay once for a lifetime license. There are no monthly fees, per-branch fees or renewals.</p></details>
+      <details><summary>Until when is the 30% discount available?</summary><p>The ₱7,000 price (down from ₱10,000) is available until November 15, 2026. After that, the regular ₱10,000 price applies.</p></details>
+      <details><summary>Can I try it before buying?</summary><p>Yes. The live demo runs on randomized sample data so you can click through checkout, inventory, payroll and reports yourself.</p></details>
+      <details><summary>Can I change the services, prices and commissions?</summary><p>Yes. Everything shown in the demo is editable in your own setup: services, packages, add-ons, prices per vehicle size, and commission rates.</p></details>
+      <details><summary>Are the receipts official BIR receipts?</summary><p>No. Receipts are sales invoices for internal record-keeping. Business owners remain responsible for complying with applicable tax and business regulations.</p></details>
+      <details><summary>Can you build a POS for a different kind of business?</summary><p>Yes. I can build custom point of sale systems for coffee shops, restaurants, retail stores, salons and more. Message me with what you need.</p></details>
     </div>
   </div>
 </section>
@@ -426,8 +507,8 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#81919b;font-size:1
 
 <section id="disclaimer" style="padding:20px 0 50px">
   <div class="container">
-    <div style="border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px 24px;background:rgba(255,255,255,.025);color:#9eb0bd;font-size:12px;line-height:1.65">
-      <strong style="color:#dce6eb">Disclaimer:</strong> Carwash POS System is a business management tool for recording transactions, tracking inventory, processing payroll and generating sales reports for car wash operators. The live demo and the screenshots on this page use randomized sample data, not a real business's records. You can find the raw sample data <a href="https://docs.google.com/spreadsheets/d/1op20wy3WUa70XN4pXWt2zLRYUpI8mG91AfCGZJM5gbc/edit?usp=sharing" target="_blank" rel="noopener" style="color:#bcdce8">here (view-only)</a>. Once set up for your own business, every price, commission rate and service offered is fully editable. Receipts generated by the system are sales invoices for internal record-keeping and are not a substitute for official BIR-registered receipts. Store owners remain responsible for complying with applicable tax and business regulations.
+    <div style="border:1px solid var(--line);border-radius:10px;padding:22px 24px;background:var(--bg2);color:var(--muted);font-size:12px;line-height:1.65">
+      <strong style="color:var(--text)">Disclaimer:</strong> Carwash POS System is a business management tool for recording transactions, tracking inventory, processing payroll and generating sales reports for car wash operators. The live demo and the screenshots on this page use randomized sample data, not a real business's records. You can find the raw sample data <a href="https://docs.google.com/spreadsheets/d/1op20wy3WUa70XN4pXWt2zLRYUpI8mG91AfCGZJM5gbc/edit?usp=sharing" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline">here (view-only)</a>. Once set up for your own business, every price, commission rate and service offered is fully editable. Receipts generated by the system are sales invoices for internal record-keeping and are not a substitute for official BIR-registered receipts. Store owners remain responsible for complying with applicable tax and business regulations.
     </div>
   </div>
 </section>
@@ -436,7 +517,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#81919b;font-size:1
 
 <footer>
   <div class="container footerin">
-    <div><strong style="color:white">Carwash POS System</strong> — Point of Sale for car wash businesses</div>
+    <div><strong style="color:var(--text)">Carwash POS System</strong> — Point of Sale for car wash businesses</div>
     <div class="footerLinks">
       <a href="mailto:charlesenrickcajan@gmail.com">Email</a>
       <a href="https://www.facebook.com/CharlesGPT/" target="_blank" rel="noopener">Facebook</a>
@@ -446,6 +527,36 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#81919b;font-size:1
     <div>© 2026 Carwash POS System. All rights reserved.</div>
   </div>
 </footer>
+
+<script>
+(function(){
+  // Promo ends at the very end of Nov 15, 2026 (Philippine time, UTC+8)
+  var END = new Date('2026-11-15T23:59:59+08:00').getTime();
+  var $ = function(id){return document.getElementById(id)};
+  var p2 = function(n){return n<10?'0'+n:''+n};
+  function expire(){
+    document.querySelectorAll('.promo-only').forEach(function(el){el.style.display='none'});
+    var pm=$('priceMain'); if(pm) pm.textContent='₱10,000';
+    var ps=$('priceSub'); if(ps) ps.textContent='One-time payment · no monthly fees';
+    var hp=$('heroPrice'); if(hp) hp.innerHTML='₱10,000 one-time license · lifetime access · no monthly fees';
+  }
+  function tick(){
+    var d = END - Date.now();
+    if(d<=0){expire();return false}
+    var days=Math.floor(d/864e5), h=Math.floor(d%864e5/36e5), m=Math.floor(d%36e5/6e4), s=Math.floor(d%6e4/1e3);
+    $('mD').textContent=days+'d'; $('mH').textContent=p2(h)+'h'; $('mM').textContent=p2(m)+'m'; $('mS').textContent=p2(s)+'s';
+    $('bD').firstChild.nodeValue=p2(days); $('bH').firstChild.nodeValue=p2(h); $('bM').firstChild.nodeValue=p2(m); $('bS').firstChild.nodeValue=p2(s);
+    return true;
+  }
+  if(tick()){ var t=setInterval(function(){ if(!tick()) clearInterval(t) },1000); }
+  // Mobile menu
+  var btn=document.querySelector('.mobileMenu'), links=document.querySelector('.navlinks');
+  if(btn&&links){
+    btn.addEventListener('click',function(){links.classList.toggle('open')});
+    links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open')})});
+  }
+})();
+</script>
 
 </body>
 </html>
