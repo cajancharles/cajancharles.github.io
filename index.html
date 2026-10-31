@@ -90,6 +90,12 @@ h2{font-size:clamp(28px,3.4vw,40px);line-height:1.12;letter-spacing:-.03em;margi
 .testimonial{border:1px solid var(--line);border-radius:14px;padding:40px;background:#fff;max-width:760px;margin:0 auto;text-align:center}
 .testimonial p{font-size:20px;line-height:1.5;color:var(--text);margin:0 0 18px}
 .testimonial .who{color:var(--muted);font-size:14px}
+.review{text-align:left;padding:36px 40px}
+.review p{font-size:17px;line-height:1.65;margin:0 0 14px}
+.review .stars{color:#f5a623;font-size:26px;letter-spacing:4px;margin-bottom:16px;line-height:1}
+.review .who{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px}
+.review .who strong{color:var(--text)}
+@media(max-width:620px){.review{padding:26px 20px}.review p{font-size:16px}}
 .cta{border-radius:16px;padding:56px;background:var(--navy);text-align:center;color:#fff}
 .cta h2{color:#fff}
 .cta .kicker{color:#7fd3f5}
@@ -390,9 +396,16 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:30px 0;col
 
 <section class="altBand">
   <div class="container">
-    <div class="testimonial">
-      <p>No more closing the day with a notebook and a calculator. Every transaction, every peso and every staff commission is accounted for the moment the sale is submitted — ready to review the second you need it.</p>
-      <div class="who">What changes on day one with Carwash POS System</div>
+    <div class="sectionHead" style="margin-bottom:32px">
+      <div class="kicker">Customer review</div>
+      <h2>What a car wash owner says.</h2>
+    </div>
+    <div class="testimonial review" lang="fil">
+      <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+      <p>"Bago ako nag-start ng carwash business, inaral ko muna ang mga challenges ng mga carwash owners. Ang pinaka-common na struggle nila ay ang pag-track ng sales — daily, weekly, monthly, yearly — at ang computation ng sahod ng empleyado. Lahat mano-mano pa, gamit lang ang calculator at logbook.</p>
+      <p>Kaya naghanap ako ng affordable at trusted na POS system. Simula nung ginamit ko itong POS, sobrang dali na ng lahat. Automatic na ang computation, at namo-monitor ko agad ang sales at revenue ko anytime, anywhere.</p>
+      <p>Bukod pa dun, sobrang approachable at maaasahan ni Sir IT. Maraming salamat po!"</p>
+      <div class="who"><strong>— Lendl</strong> (ALAS Carwash Owner)</div>
     </div>
   </div>
 </section>
